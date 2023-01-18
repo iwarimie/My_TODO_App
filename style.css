@@ -1,0 +1,147 @@
+body{
+    font-family: sans-serif;
+    background-color: #1d3557c6;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app{
+    width: 400px;
+    height: 550px;
+    border: 5px solid  #1d3557;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #a8dadc;
+    overflow-y: scroll;
+}
+
+.app::-webkit-scrollbar{
+    width: 0 !important;
+}
+
+h3, h4{
+    text-align: center;
+}
+
+#addNew{
+    display: flex;
+    justify-content: space-between;
+    background-color: #f1faee;
+    align-items: center;
+    padding: 13px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.bi-plus-circle{
+    background-color:   #457b9d;
+    color: #fff;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+#tasks{
+    display: grid;
+    gap: 15px;
+}
+
+#tasks div{
+    background-color: #f1faee;
+    border: 3px solid #457b9d;
+    padding: 7px;
+    border-radius: 6px;
+    display: grid;
+    gap: 10px;
+}
+
+.task-heading{
+    font-weight: bold;
+}
+
+.task-date{
+    color: rgba(18, 19, 20, 0.75);
+}
+
+.options{
+    justify-self: center;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+/** 
+*!styles for the modal overlay
+**/
+
+#modal{
+    position: fixed;
+    top: 10%;
+    left: 25%;
+    width: 50%;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+#backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+    
+}
+@media (min-width: 20rem) {
+    .modal{
+        left: calc(25% - 40rem);
+        width: 18rem;
+    }
+}
+@media (min-width: 48rem) {
+    .modal{
+        left: calc(50% - 20rem);
+        width: 40rem;
+    }
+}
+
+form{
+    width: 400px;
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    border: 2px solid rgb(91, 134, 214);
+    border-radius: 6px;
+    
+}
+
+input, textarea{
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+button{
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+input:focus, textarea:focus{
+    border: 2px solid rgb(83, 6, 62);
+}
+
+#error-msg{
+    color: #e63946;
+}
